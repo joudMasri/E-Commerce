@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
  @Input() title:string ='';
- @Input() description :string =''
+ @Input() description :string ='';
+ @Input() imgC:string='';
   constructor() { }
 
   ngOnInit(): void {

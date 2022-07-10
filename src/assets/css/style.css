@@ -481,6 +481,7 @@ section {
 }
 .featured img {
   border-radius: 0;
+ height: calc(100rem/5);
 }
 .featured .card {
   border: 0;
@@ -496,8 +497,8 @@ section {
   color: #052c3f;
 }
 .featured .card-text {
-  height: calc(100vh/3.5);
-  text-overflow: ellipsis;
+  height: calc(100vh/4);
+  text-overflow:ellipsis;
   overflow: hidden;
 }
 .featured .btn {
@@ -542,7 +543,7 @@ section {
   color: #fff;
 }
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
+  width: calc(100rem/13);
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
@@ -629,6 +630,7 @@ section {
 }
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  height: calc(100rem/5);
 }
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
@@ -687,6 +689,12 @@ section {
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 20px;
+}
+
+.img-height{
+  /* height: 95%; */
+  overflow: hidden;
+  height: calc(100rem/6);
 }
 
 /* .cardHeight{
@@ -902,7 +910,7 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq {
-  padding-top: 0;
+  padding-top: 1%;
 }
 .faq .faq-item {
   margin-bottom: 40px;

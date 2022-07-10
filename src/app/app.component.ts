@@ -9,6 +9,7 @@ export class AppComponent {
   services:any = [];
   categories:any =[];
   portfolio:any =[];
+  teamMembers:any =[];
   constructor(private apiCaller : HttpClient){
 
     this.apiCaller.get('http://localhost:3000/data')
@@ -26,6 +27,7 @@ export class AppComponent {
         let c= {
             title : json[i].titleC,
             description : json[i].descriptionC,
+            imgC: json[i].imgC
         }
         this.categories.push(c)
       }
@@ -38,6 +40,14 @@ export class AppComponent {
         }
         this.portfolio.push(p)
       }
+
+      for (let i = 0; i < 4; i++) {
+        let member = {
+          imgMember: json[i].imgMember,
+        }
+        this.teamMembers.push(member); 
+      }
+
 
     })
   }
