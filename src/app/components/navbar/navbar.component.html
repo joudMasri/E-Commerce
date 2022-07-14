@@ -1,36 +1,10 @@
   
     <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#featured">Categories</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#about">Fovorite</a></li>
-          <li class="dropdown"><a href="#"><span>Brands</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-
-              <li class="dropdown"><a href="#"><span>Men Brans</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Balenciaga</a></li>
-                  <li><a href="#">The North Face</a></li>
-                  <li><a href="#">H&M</a></li>
-                  <li><a href="#">Versace</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Women Brans</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">LOUIS VUITTON</a></li>
-                  <li><a href="#">GUCCI</a></li>
-                  <li><a href="#">Dolce & Gabbana</a></li>
-                  <li><a href="#">PRADA</a></li>
-                  <li><a href="#">CHANEL</a></li>
-                </ul>
-              </li>
-             
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" routerLink="/Home">Home</a></li>
+          <li><a class="nav-link scrollto loginSignout" (click)="loginSignout" routerLink="/Login-Signup">Register</a></li>
+          <li><a class="nav-link scrollto " routerLink="/Favorite">Favorite</a></li>
+          <li><a class="nav-link scrollto " routerLink="/cart"><i class="fa fa-shopping-cart" style="font-size:1.25rem"></i></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

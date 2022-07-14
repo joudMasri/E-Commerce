@@ -11,7 +11,15 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ItemComponent } from './components/item/item.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TeamMemberComponent } from './components/team-member/team-member.component';
-import { FrequentlyQuestionsComponent } from './components/frequently-questions/frequently-questions.component'
+import { FrequentlyQuestionsComponent } from './components/frequently-questions/frequently-questions.component';
+import { LoginSignupComponent } from './login-signup/login-signup.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartComponent } from './cart/cart.component';
+import { FavoriteStyleComponent } from './components/favorite-style/favorite-style.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +30,19 @@ import { FrequentlyQuestionsComponent } from './components/frequently-questions/
     ItemComponent,
     FooterComponent,
     TeamMemberComponent,
-    FrequentlyQuestionsComponent
+    FrequentlyQuestionsComponent,
+    LoginSignupComponent,
+    HomePageComponent,
+    FavoriteComponent,
+    CartComponent,
+    FavoriteStyleComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
-   
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

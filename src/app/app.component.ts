@@ -6,49 +6,7 @@ import {HttpClient} from "@angular/common/http"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  services:any = [];
-  categories:any =[];
-  portfolio:any =[];
-  teamMembers:any =[];
-  constructor(private apiCaller : HttpClient){
 
-    this.apiCaller.get('http://localhost:3000/data')
-    .subscribe((json:any =[])=>{
+  constructor(){}
 
-      for (let i = 1; i < json.length; i++) {
-        let f = {
-          title: json[i].title,
-          description :json[i].description
-        }
-        this.services.push(f); 
-      }
-
-      for (let i = 0; i <3; i++) {
-        let c= {
-            title : json[i].titleC,
-            description : json[i].descriptionC,
-            imgC: json[i].imgC
-        }
-        this.categories.push(c)
-      }
-
-      for (let i = 0; i <3; i++) {
-        let p= {
-            urlMan : json[i].urlMan,
-            urlWomen : json[i].urlWomen,
-            urlChildren :json[i].urlChildren
-        }
-        this.portfolio.push(p)
-      }
-
-      for (let i = 0; i < 4; i++) {
-        let member = {
-          imgMember: json[i].imgMember,
-        }
-        this.teamMembers.push(member); 
-      }
-
-
-    })
-  }
 }
