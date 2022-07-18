@@ -6,9 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cart-item.component.css']
 })
 export class CartItemComponent implements OnInit {
-  @Input() cImgUrl ='';
-  @Input() price =0;
-  @Input() name ='';
+  @Input() cartItem :any;
   constructor() { }
 
   ngOnInit(): void {

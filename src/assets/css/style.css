@@ -1221,59 +1221,29 @@ section {
   font-size: 13px;
 }
 
-
-/*--------------------------------------------------------------
-# Values
---------------------------------------------------------------*/
-
-/* .app-cart-item{
-  padding-top: 10rem;
-} */
-.values .card {
-  border: 0;
-  padding: calc(100vh/5) 20px 20px 20px;
-  position: relative;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-}
-.values .card-body {
-  z-index: 10;
-  background: rgb(235, 235, 235);
-  /* padding: 15px 30px; */
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  transition: ease-in-out 0.4s;
-  /* border-radius: 5px; */
-  /* text-shadow: 2px 2px; */
-}
-.values .card-title {
-  font-weight: 700;
+/* .totalLocation{
   text-align: center;
-  margin-bottom: 15px;
+} */
+
+.totalItemsPreview{
+  text-align: center;
+  width: 50%;
+  right: -25%;
 }
-.values .card-title a {
-  color: #473d3a;
+.deleteIcon{
+  margin: auto;
+  padding: auto;
+  cursor: pointer;
+  color:rgb(211, 50, 50);;
 }
-.values .card-text {
-  color: #4b4949;
+.deleteIcon:hover{
+  color: red;
 }
-.values .read-more a {
-  color: #656262;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  transition: 0.4s;
-}
-.values .read-more a:hover {
-  text-decoration: underline;
-}
-.values .card:hover .card-body {
+.returnHome{
   background: #85b0be;
-}
-.values .card:hover .read-more a, .values .card:hover .card-title, .values .card:hover .card-title a, .values .card:hover .card-text {
+  border: 0;
+  padding: 10px 13px;
   color: #fff;
-  
+  transition: 0.4s;
+  border-radius: 4px;
 }

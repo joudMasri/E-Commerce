@@ -1,31 +1,13 @@
-<header style="background-color:rgb(203, 203, 203) ;opacity:0.7;" id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container d-flex align-items-center justify-content-between">
-  
-      <div class="logo">
-        <h1><a >J&M</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-      <app-navbar></app-navbar>
-     
-    </div>
-  </header>
 
-  <section  id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Your Favorite items</h2>
-        <!-- <p>Magnam dolores commodi suscipit onsequatur ex aliquid fuga eum quidem</p> -->
-      </div>
-    </div>
-</section>
-  <app-cart-item  *ngFor=" let item of cartItems"
- 
-  [name]="item.name"
-  [cImgUrl]="item.cImgUrl"
-  [price]="item.price"
-
-  ></app-cart-item>
-
+        <section *ngIf="cartItems.length > 0" id="portfolio" class="portfolio">
+        <div class="section-title">
+          <div class="container">
+          <h2>Your Cart items</h2>
+        </div>
+          </div>
+        </section>
+  <app-cart-item style="margin-left:calc(100vh/10) ;" *ngFor="let item of cartItems"
+  [cartItem] ="item"></app-cart-item>
+  <div  style="margin-top:calc(-100vh/7) ;"  class="alert alert-info totalItemsPreview"> <strong>Total buying product = {{cartTotal | currency:'	&#36;'}}</strong> </div>
+  <div ><a style="float: right;" routerLink="/navbar/Home"><button class="returnHome">Continue Shopping</button></a></div>
 

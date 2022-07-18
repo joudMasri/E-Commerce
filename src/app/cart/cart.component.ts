@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../models/product';
-import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
+
 
 @Component({
   selector: 'app-cart',
@@ -9,20 +10,36 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
+  data :any;
   cartItems=[
-  { cImgUrl  : "../../assets/img/portfolio/men-2.jpg", id: 1, name: 'Name 1' , price : 10, description : 'description'},
-  {cImgUrl : "../../assets/img/portfolio/women-1.jpg", id: 1, name: 'Name 1' , price : 20, description : 'description'},
-  { cImgUrl  : "../../assets/img/portfolio/children-1.jpg",id: 1, name: 'Name 1' , price : 35, description : 'description',}];
+  { id: 1,productId:1, name: 'Name 1' , price : 10, description : 'description',qty:4 , cImgUrl  : "../../assets/img/portfolio/men-1.jpg"},
+];
 
 
-  constructor(private apiCaller : HttpClient, private productService:ProductService) {
+  cartTotal =0;
 
-
+  constructor(private getItem :CartService ,private router:Router, private route: ActivatedRoute) {
    }
 
-  ngOnInit(): void {
-   
-  }
+  ngOnInit(){
 
+    this.route.queryParams.subscribe((product)=>{
+        console.log(product);
+        this.data =JSON.parse(product['data']);
+        this.cartItems.push({
+                name: this.data.name,
+                price: this.data.price,
+                id :1,
+                description:'ddws',
+                qty:1,
+                cImgUrl:"../../assets/img/portfolio/men-1.jpg",
+                productId:1
+          })
+    this.cartItems.forEach(item =>{
+      this.cartTotal +=( item.qty *item.price)
+     })
+  })
 }
+}
+
+ 

@@ -1,17 +1,4 @@
-<header style="background-color:rgb(203, 203, 203) ;opacity:0.7;" id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container d-flex align-items-center justify-content-between">
-  
-      <div class="logo">
-        <h1><a >J&M</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-      <app-navbar></app-navbar>
-  
-    </div>
-  </header>
-
-
+<app-navbar></app-navbar>
   <div *ngIf="favoriteItems.length == 0" class="alert alert-info">Your Cart is Empty</div>
 
   <section *ngIf="favoriteItems.length > 0" id="portfolio" class="portfolio">

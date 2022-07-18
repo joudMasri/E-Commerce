@@ -37,6 +37,9 @@ export class ProductService {
 
       for (let i = 0; i <3; i++) {
         let p= {
+          menId :json[i].menId,
+          womenId :json[i].womenId,
+          childrenId :json[i].childrenId,
             menUrl  : json[i].urlMan,
             womenUrl : json[i].urlWomen,
             childrenUrl :json[i].urlChildren,

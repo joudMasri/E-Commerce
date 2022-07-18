@@ -1,10 +1,23 @@
   
-    <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" routerLink="/Home">Home</a></li>
-          <li><a class="nav-link scrollto loginSignout" (click)="loginSignout" routerLink="/Login-Signup">Register</a></li>
-          <li><a class="nav-link scrollto " routerLink="/Favorite">Favorite</a></li>
-          <li><a class="nav-link scrollto " routerLink="/cart"><i class="fa fa-shopping-cart" style="font-size:1.25rem"></i></a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    <!-- .navbar -->
+      <header style="background-color:rgb(203, 203, 203) ;opacity:0.7;" id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex align-items-center justify-content-between">
+      
+          <div class="logo">
+            <h1><a >J&M</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          </div>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" routerLinkActive="" routerLink="/navbar/Home">Home</a></li>
+              <li><a class="nav-link scrollto loginSignout" routerLinkActive="" (click)="loginSignout" routerLink="/navbar/Login-Signup">Register</a></li>
+              <li><a class="nav-link scrollto " routerLinkActive="" routerLink="/navbar/Favorite">Favorite</a></li>
+              <li><a class="nav-link scrollto " routerLinkActive="" routerLink="/navbar/cart"><i class="fa fa-shopping-cart" style="font-size:1.25rem"></i></a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+      
+        </div>
+      </header>
+      <router-outlet></router-outlet>

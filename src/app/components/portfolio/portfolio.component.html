@@ -1,35 +1,43 @@
 
-        <div class="img-height">
-          <img [src]= 'urlMan'class="img-fluid" alt="">
+        <!-- <div class="img-height">
+          <img [src]= 'productItem.menUrl'class="img-fluid" alt="">
           <div class="portfolio-info">
-          <h4>{{name}}</h4>
-          <p>{{price| currency:'	&#36;'}}</p>
-          <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <h4>{{productItem.name}}</h4>
+          <p>{{productItem.price| currency:'	&#36;'}}</p>
+          <a  data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
           <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           <a  routerLink="/Favorite" class="favorite-link portfolio-lightbox preview-link" title="Favorite"><i class="	fa fa-heart"></i></a>
           </div>
-        </div>
-        
+        </div> -->
+<!--         
         <div class="img-height">
-          <img [src]= 'urlWomen'class="img-fluid img-height" alt="">
+          <img [src]= 'productItem.womenUrl'class="img-fluid img-height" alt="">
           <div class="portfolio-info">
-          <h4>{{name}}</h4>
-          <p>{{price | currency:'	&#36;'}}</p>
-          <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <h4>{{productItem.name}}</h4>
+          <p>{{productItem.price | currency:'	&#36;'}}</p>
+          <a  data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
           <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           <a  routerLink="/Favorite" class="favorite-link portfolio-lightbox preview-link" title="Favorite"><i class="	fa fa-heart"></i></a>
           </div>
-        </div>
+        </div> -->
 
         <div class="img-height">
-          <img [src]= 'urlChildren'class="img-fluid" alt="">
+          <img [src]= 'productItem.childrenUrl'class="img-fluid" alt="">
           <div class="portfolio-info">
-          <h4>{{name}}</h4>
-          <p>{{price | currency:'	&#36;'}}</p>
-          <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <h4>{{productItem.name}}</h4>
+          <p>{{productItem.price | currency:'	&#36;'}}</p>
+
+          <a style="cursor: pointer;" 
+          (click)="handleAddToCart()"
+          data-gallery="portfolioGallery" 
+          class="portfolio-lightbox preview-link" 
+          title="Add to Cart"><i class="bx bx-plus"></i></a>
+          
           <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-          <a  routerLink="/Favorite" class="favorite-link portfolio-lightbox preview-link" title="Favorite"><i class="	fa fa-heart"></i></a>
+          <a   class="favorite-link portfolio-lightbox preview-link" title="Favorite"><i class="	fa fa-heart"></i></a>
           </div>
+       
         </div>
+        <button  (click)="handleAddToCart()">click me</button>
 
 <!-- End Portfolio Section -->
